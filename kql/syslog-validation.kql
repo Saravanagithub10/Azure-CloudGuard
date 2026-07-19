@@ -1,0 +1,4 @@
+Syslog
+| where TimeGenerated > ago(24h)
+| project TimeGenerated, Computer, Facility, ProcessName, SyslogMessage
+| order by TimeGenerated desc
